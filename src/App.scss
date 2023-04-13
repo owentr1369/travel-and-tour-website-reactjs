@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;500;600;700;800;900&display=swap");
+@import "./styles/variables";
 
 * {
   margin: 0;
@@ -7,24 +8,6 @@
   font-family: "Poppins", sans-serif;
 }
 
-// Colors and styling
-:root {
-  --PrimaryColor: hsl(199, 100%, 33%);
-  --SecondaryColor: hsl(187, 85%, 43%);
-  --GradientColor: linear-gradient(
-    to right,
-    hsl(187, 85%, 43%),
-    hsl(199, 100%, 33%)
-  );
-  --whiteColor: hsl(0, 0%, 100%);
-  --blackColor: hsl(201, 33%, 16%);
-  --textColor: hsl(240, 4%, 36%);
-  --whiteColorDeam: hsl(0, 0%, 93%);
-  --greyText: rgb(190, 190, 190);
-  --inputColor: rgb(239, 239, 239);
-  --bodyColor: rgb(240, 240, 246);
-  --cardBG: rgb(225, 255, 235);
-}
 a {
   text-decoration: none;
 }
@@ -57,17 +40,17 @@ li {
 }
 .btn {
   padding: 0.6rem 1.5rem;
-  background: var(--GradientColor);
+  background: $GradientColor;
   border-radius: 3rem;
   border: none;
   outline: none;
   cursor: pointer;
   a {
-    color: var(--whiteColor);
+    color: $whiteColor;
     font-weight: 500;
   }
   &:hover {
-    background: var(--SecondaryColor);
+    background: $SecondaryColor;
   }
 }
 
