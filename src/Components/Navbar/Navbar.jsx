@@ -1,9 +1,22 @@
 import './_navbar.scss'
-import React from 'react';
+import React, { useState } from 'react';
 import { MdOutlineTravelExplore } from 'react-icons/md'
 import { AiFillCloseCircle, AiOutlineMenu } from 'react-icons/ai'
 
 const Navbar = () => {
+
+    const [active, setActive] = useState('navBar')
+
+    // Toggle navbar function
+
+    const showNav = () => {
+        setActive('navBar activeNavbar')
+    }
+
+    const closeNav = () => {
+        setActive('navBar')
+    }
+
     return (
         <section className='navbarSection'>
             <header className="header flex">
@@ -12,7 +25,7 @@ const Navbar = () => {
                         <h1><MdOutlineTravelExplore className='icon' /> Travel.</h1>
                     </a>
                 </div>
-                <div className="navBar">
+                <div className={active}>
                     <ul className="navLists flex">
                         <li className="navItem">
                             <a href="#" className="navLink">
@@ -52,11 +65,11 @@ const Navbar = () => {
                         <button className="btn"><a href="#">BOOK NOW</a></button>
                     </ul>
 
-                    <div className="closeNavbar">
+                    <div onClick={closeNav} className="closeNavbar">
                         <AiFillCloseCircle className='icon' />
                     </div>
                 </div>
-                <div className="toogleNavbar">
+                <div onClick={showNav} className="toogleNavbar">
                     <AiOutlineMenu className='icon' />
                 </div>
             </header>

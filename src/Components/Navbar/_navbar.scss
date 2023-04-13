@@ -4,11 +4,12 @@
   position: fixed;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   background: $whiteColorDeam;
   width: 100%;
   padding: 1rem;
   z-index: 1000;
+  box-shadow: 0 2px 4px rgba(2, 15, 29, 0.4);
   .logo {
     color: $blackColor;
     font-weight: 600;
@@ -29,12 +30,13 @@
       height: max-content;
       width: 80%;
       border-radius: 1rem;
-      top: 6rem;
+      top: -500rem;
       left: 50%;
       transform: translateX(-50%);
       z-index: 2000;
       box-shadow: 0 2px 4px rgba(2, 15, 29, 0.9);
-      transition: 0.3s ease-in-out;
+      transition: 0.5s ease-in-out;
+      padding: 1rem;
       .navLists {
         flex-direction: column;
         justify-content: center;
@@ -69,6 +71,18 @@
           color: $SecondaryColor;
         }
       }
+    }
+    .activeNavbar {
+      top: 7rem;
+    }
+  }
+  .toggleNavbar {
+    .icon {
+      font-size: 25px;
+      color: $PrimaryColor;
+    }
+    &:hover .icon {
+      color: $SecondaryColor;
     }
   }
 }
